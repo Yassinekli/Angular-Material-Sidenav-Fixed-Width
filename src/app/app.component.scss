@@ -1,0 +1,62 @@
+
+.primary-color{
+    color: #464317;
+}
+
+.toolbar{
+    background-color: #d4cb4d;
+}
+
+.icon{
+    cursor: pointer;
+    user-select: none;
+}
+
+.icon-text{
+    margin-left: 17px;
+}
+
+.sidenav-container{
+    height: calc(100% - 64px);
+}
+
+.sidenav,
+.sidenav-content{
+    height: 100%;
+}
+
+.sidenav{
+    background-color: #f6ff7f;
+    
+    /* The Styles Below Are Responsible For The Sidenav Fixed Width  */
+    width: 58px;
+    overflow: hidden;
+    -webkit-transition: width .3s ease-in-out;
+    -moz-transition: width .3s ease-in-out;
+    -o-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    
+    ::ng-deep .mat-drawer-inner-container{
+        overflow: hidden;
+    }
+}
+
+.sidenav-content{
+    background-color: #ecd468;
+    padding: 10px;
+
+    /* The Styles Below Are Responsible For The Sidenav Fixed Width */
+    margin-left: 58px;
+    -webkit-transition: margin-left .3s ease-in-out;
+    -moz-transition: margin-left .3s ease-in-out;
+    -o-transition: margin-left .3s ease-in-out;
+    transition: margin-left .3s ease-in-out;
+}
+
+
+/* Media Queries */
+@media (max-width: 600px){
+    .sidenav-container{
+        height: calc(100% - 56px);
+    }
+}
