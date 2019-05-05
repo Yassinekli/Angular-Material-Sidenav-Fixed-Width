@@ -13,7 +13,7 @@
 }
 
 .icon-text{
-    margin-left: 17px;
+    margin-left: 18px;
 }
 
 .sidenav-container{
@@ -35,10 +35,26 @@
     -moz-transition: width .3s ease-in-out;
     -o-transition: width .3s ease-in-out;
     transition: width .3s ease-in-out;
-    
+
     ::ng-deep .mat-drawer-inner-container{
         overflow: hidden;
     }
+    
+    .list-item{
+        cursor: pointer;
+    }
+
+    .list-item:focus{
+        outline: none;
+    }
+
+    .current-page{
+        background-color: #ecd468;
+    }
+}
+
+.mat-drawer-side{
+    border: none !important;
 }
 
 .sidenav-content{

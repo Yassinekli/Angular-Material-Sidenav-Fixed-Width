@@ -10,17 +10,41 @@
    >
       <mat-list role="list">
          <!-- Home -->
-         <mat-list-item role="listitem" class="list-item primary-color">
+         <mat-list-item
+            routerLink="/" 
+            role="listitem"
+            [ngClass]="{
+               'current-page': activatedRoute === '/',
+               'list-item': true,
+               'primary-color': true
+            }"
+         >
             <mat-icon class="icon">home</mat-icon>
             <span class="icon-text">Home</span>
          </mat-list-item>
          <!-- Account -->
-         <mat-list-item role="listitem" class="list-item primary-color">
+         <mat-list-item
+            routerLink="/account"
+            role="listitem" 
+            [ngClass]="{
+               'current-page': activatedRoute === '/account',
+               'list-item': true,
+               'primary-color': true
+            }"
+         >
             <mat-icon class="icon">account_box</mat-icon>
             <span class="icon-text">Account</span>
          </mat-list-item>
          <!-- Settings -->
-         <mat-list-item role="listitem" class="list-item primary-color">
+         <mat-list-item
+            routerLink="/settings" 
+            role="listitem" 
+            [ngClass]="{
+               'current-page': activatedRoute === '/settings',
+               'list-item': true,
+               'primary-color': true
+            }"
+         >
             <mat-icon class="icon">settings</mat-icon>
             <span class="icon-text">Settings</span>
          </mat-list-item>
@@ -31,8 +55,7 @@
       [style.marginLeft]="isClosed ? '58px' : '133px'"
    >
       <div class="primary-color">
-         <h1>Lorem Ipsum</h1>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias explicabo voluptas maxime? Illo pariatur placeat, ipsam labore voluptatibus quos minus autem cum. Eaque mollitia explicabo, pariatur nulla nesciunt qui sapiente!Voluptatum illum ipsum animi quae minus nulla iste exercitationem reprehenderit porro a. Exercitationem perspiciatis, saepe ullam error possimus repudiandae ea animi labore maiores adipisci. A magnam vel dolores rerum quibusdam.</p>
+         <router-outlet></router-outlet>
       </div>
    </mat-sidenav-content>
 </mat-sidenav-container>
